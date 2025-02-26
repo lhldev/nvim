@@ -28,7 +28,7 @@ lsp_zero.extend_lspconfig({
 require('lspconfig').ts_ls.setup({})    -- JavaScript/TypeScript
 require('lspconfig').rust_analyzer.setup({}) -- Rust
 require('lspconfig').clangd.setup({       -- C/C+
-	cmd = { "clangd-12" },
+	cmd = { "clangd" },
 })
 require('lspconfig').vimls.setup({})
 require('lspconfig').lua_ls.setup ({
