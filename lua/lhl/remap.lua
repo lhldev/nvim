@@ -24,3 +24,7 @@ vim.keymap.set("v", "<Tab>", ":lua IndentForward()<CR>")
 vim.keymap.set("v", "<S-Tab>", ":lua IndentBackward()<CR>")
 
 vim.keymap.set('n', '<leader>p', ':let @+=expand("%:p")<CR>')
+
+vim.keymap.set("n", "<leader>c", function()
+    vim.cmd("!cmake --fresh -S . -B build")
+end)

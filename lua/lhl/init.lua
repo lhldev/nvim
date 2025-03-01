@@ -12,10 +12,8 @@ vim.cmd [[
     if l:extension == 'rs'
         let l:manifestPath = expand('%:p:h:h') . "/Cargo.toml" " Go :h:h go back two file
         call RunInTerminal('cargo run --manifest-path "' . l:manifestPath . '"')
-    elseif l:extension == 'c'
-        call RunInTerminal('gcc "' . l:filename . '" -o "' . l:outPath . '" && "' . l:outPath . '"')
-    elseif l:extension == 'cpp'
-        call RunInTerminal('g++ "' . l:filename . '" -o "' . l:outPath . '" && "' . l:outPath . '"')
+    elseif l:extension == 'c' || l:extension == 'cpp' || l:extension == 'h' || l:extension == 'hpp'
+        call RunInTerminal('make -C build run')
     elseif l:extension == 'html'
         execute 'lua LiveServer()'
         execute '!explorer.exe http://localhost:8080'
