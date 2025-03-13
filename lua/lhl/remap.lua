@@ -28,3 +28,5 @@ vim.keymap.set('n', '<leader>p', ':let @+=expand("%:p")<CR>')
 vim.keymap.set("n", "<leader>c", function()
     vim.cmd("!cmake --fresh -S . -B build")
 end)
+
+vim.keymap.set("n", "<leader>t", ":call RunCTest()<CR>")

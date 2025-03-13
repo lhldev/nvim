@@ -22,6 +22,10 @@ vim.cmd [[
     endif
   endfunction
 
+  function! RunCTest()
+    call RunInTerminal('cd build && ctest')
+  endfunction
+
   function! RunInTerminal(cmd)
     execute 'botright split | term ' . a:cmd
     startinsert
