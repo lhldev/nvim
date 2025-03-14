@@ -23,7 +23,7 @@ vim.cmd [[
   endfunction
 
   function! RunCTest()
-    call RunInTerminal('cd build && ctest')
+    call RunInTerminal('cd build && ctest --output-on-failure')
   endfunction
 
   function! RunInTerminal(cmd)
