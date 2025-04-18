@@ -28,6 +28,7 @@ lsp_zero.extend_lspconfig({
 -- servers you have installed in your system
 require('lspconfig').ts_ls.setup({})    -- JavaScript/TypeScript
 require('lspconfig').rust_analyzer.setup({}) -- Rust
+require('lspconfig').gopls.setup({})
 require('lspconfig').clangd.setup({       -- C/C+
 	cmd = { "clangd" },
 })
