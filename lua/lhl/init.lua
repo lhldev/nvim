@@ -12,7 +12,7 @@ vim.cmd [[
     if l:extension == 'rs'
         let l:manifestPath = expand('%:p:h:h') . "/Cargo.toml" " Go :h:h go back two file
         call RunInTerminal('cargo run --manifest-path "' . l:manifestPath . '"')
-    elseif l:extension == 'c' || l:extension == 'cpp' || l:extension == 'h' || l:extension == 'hpp' || l:extension == 'go'
+    elseif l:extension == 'c' || l:extension == 'cpp' || l:extension == 'h' || l:extension == 'hpp'
         call RunInTerminal('make -C build run')
     elseif l:extension == 'go'
         call RunInTerminal('go run .')
@@ -78,7 +78,7 @@ function ToggleComment()
 
     local comment_leader
 
-    if extension == 'c' or extension == 'cpp' or extension == 'h' or extension == 'hpp' or extension == 'rs' or extension == 'js' then
+    if extension == 'c' or extension == 'cpp' or extension == 'h' or extension == 'hpp' or extension == 'rs' or extension == 'js' or extension == 'go' then
         comment_leader = "// "
     elseif extension == 'lua' then
         comment_leader = "-- "
