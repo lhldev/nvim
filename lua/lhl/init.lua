@@ -12,7 +12,7 @@ vim.cmd [[
     if l:extension == 'rs'
         let l:manifestPath = expand('%:p:h:h') . "/Cargo.toml" " Go :h:h go back two file
         call RunInTerminal('cargo run --manifest-path "' . l:manifestPath . '"')
-    elseif l:extension == 'c' || l:extension == 'cpp' || l:extension == 'h' || l:extension == 'hpp'
+    elseif l:extension == 'c' || l:extension == 'cpp' || l:extension == 'h' || l:extension == 'hpp' || l:extension == 'go'
         call RunInTerminal('make -C build run')
     elseif l:extension == 'go'
         call RunInTerminal('go run .')
