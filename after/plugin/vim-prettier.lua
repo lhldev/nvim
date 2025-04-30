@@ -11,7 +11,7 @@ vim.g.prettier_config_trailing_comma = 'es5'
 
 -- Auto-format files on save
 vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = { "*.js", "*.ts", "*.css", "*.html", "*.json" },
+  pattern = { "*.js", "*.ts", "*.css", "*.json"},
   command = "Prettier",
 })
 
