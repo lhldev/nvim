@@ -42,6 +42,7 @@ require('lspconfig').gopls.setup({
     },
   },
 })
+require('lspconfig').csharp_ls.setup({})
 require('lspconfig').clangd.setup({       -- C/C+
 	cmd = { "clangd" },
 })

@@ -14,6 +14,8 @@ vim.cmd [[
         call RunInTerminal('cargo run --manifest-path "' . l:manifestPath . '"')
     elseif l:extension == 'c' || l:extension == 'cpp' || l:extension == 'h' || l:extension == 'hpp'
         call RunInTerminal('make -C build run -j $(nproc)')
+    elseif l:extension == 'cs'
+        call RunInTerminal('dotnet run')
     elseif l:extension == 'go'
         call RunInTerminal('go run .')
     elseif l:extension == 'html'
