@@ -80,13 +80,10 @@ else
 
         local comment_leader
 
-        if extension == 'c' or extension == 'cpp' or extension == 'h' or extension == 'hpp' or extension == 'rs' or extension == 'js' or extension == 'go' then
-            comment_leader = "// "
-        elseif extension == 'lua' then
+        if extension == 'lua' then
             comment_leader = "-- "
         else
-            vim.api.nvim_out_write("Auto commenting not suported for this file type!\n")
-            return
+            comment_leader = "// "
         end
 
         for line_num = start_line, end_line do
