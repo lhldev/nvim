@@ -72,36 +72,6 @@ else
         end
     end
 
-    function ToggleComment()
-        local start_line = vim.fn.line("'<")
-        local end_line = vim.fn.line("'>")
-
-        local extension = vim.fn.expand('%:e')
-
-        local comment_leader
-
-        if extension == 'lua' then
-            comment_leader = "-- "
-        else
-            comment_leader = "// "
-        end
-
-        for line_num = start_line, end_line do
-            local line = vim.fn.getline(line_num)
-
-            if line:match("^%s*$") then
-                -- skip
-            elseif line:match("^%s*" .. vim.pesc(comment_leader)) then
-                line = line:gsub("^(%s*)" .. vim.pesc(comment_leader), "%1")
-            else
-                -- comment it
-                line = line:gsub("^(%s*)", "%1" .. comment_leader)
-            end
-
-            vim.fn.setline(line_num, line)
-        end
-    end
-
     function IndentForward()
         local start_line = vim.fn.line("'<")
         local end_line = vim.fn.line("'>")

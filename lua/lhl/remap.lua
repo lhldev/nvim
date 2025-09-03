@@ -18,7 +18,6 @@ vim.keymap.set("v", "<C-c>", "\"+y")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 vim.keymap.set("n", "<leader>r", ":call RunCurrentFile()<CR>")
-vim.keymap.set("v", "<leader>c", ":lua ToggleComment()<CR>")
 
 vim.keymap.set("v", "<Tab>", ":lua IndentForward()<CR>")
 vim.keymap.set("v", "<S-Tab>", ":lua IndentBackward()<CR>")
