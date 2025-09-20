@@ -19,6 +19,8 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 vim.keymap.set("n", "<leader>r", ":call RunCurrentFile()<CR>")
 
+vim.keymap.set("n", "<leader>f", ":lua vim.lsp.buf.format({async=true})<CR>")
+
 vim.keymap.set("v", "<Tab>", ":lua IndentForward()<CR>")
 vim.keymap.set("v", "<S-Tab>", ":lua IndentBackward()<CR>")
 

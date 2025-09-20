@@ -27,6 +27,7 @@ lsp_zero.extend_lspconfig({
 -- These are just examples. Replace them with the language
 -- servers you have installed in your system
 require('lspconfig').ts_ls.setup({})    -- JavaScript/TypeScript
+require('lspconfig').html.setup({})
 require('lspconfig').rust_analyzer.setup({}) -- Rust
 require('lspconfig').gopls.setup({
   settings = {
